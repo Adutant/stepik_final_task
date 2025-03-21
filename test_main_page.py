@@ -8,7 +8,7 @@ def test_guest_can_go_to_login_page(browser):
     page.open()                      # открываем страницу
     page.go_to_login_page()          # выполняем метод страницы — переходим на страницу логина
 
-    login_page = LoginPage(browser, link)
+    login_page = LoginPage(browser, browser.current_url)
     login_page.should_be_login_page()
 
 
